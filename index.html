@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<style>
+		.img_wrapper img{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+<div class="imgs_wrapper">
+	<div class="img_wrapper">
+		<img src="http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg" alt="" />
+	</div>
+</div>
+<a href="#" class="btn_more">MORE!</a>
+
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="./AsyncImageLoad.js"></script>
+<script>
+(function ($) {
+	var image_array = [
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg',
+		'http://www.photosbytrinagueck.com/wp-content/uploads/94009-937188d4a2be1a90dfc47c4d403a0064.jpg'
+	];
+
+	$('.imgs_wrapper').AsyncImageLoad({
+		btnMoreClass : 'btn_more',
+		imageWrapperClass : 'img_wrapper',
+		data : image_array,
+		appendCount : 2
+	});
+}(jQuery));
+</script>
+
+
+</body>
+</html>
